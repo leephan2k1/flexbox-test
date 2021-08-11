@@ -1,0 +1,225 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Helvetica Neue";
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #282C34;
+    /* background-color: #318CE7; */
+    font-size: 10px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-height: 90px;
+    width: 100vw;
+    background: linear-gradient(90deg, rgba(25, 35, 87, 1) 0%, rgba(8, 109, 203, 1) 90%);
+    color: white;
+    flex-wrap: nowrap;
+}
+
+.nav__list {
+    min-width: 350px;
+}
+
+.logo {
+    max-width: cover;
+    max-height: 80px;
+}
+
+.nav__title {
+    font-size: 1.5rem;
+    display: inline-block;
+    font-weight: lighter;
+    height: cover;
+    min-width: 350px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+
+.home,
+.sign-up {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-left: 10px;
+    color: white;
+    text-align: right;
+    transition: all 0.5s;
+    min-width: 120px;
+    border: 1px solid;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.home:hover {
+    color: black;
+    background-color: white;
+    transform: scale(110%);
+    margin-left: 10px;
+}
+
+.sign-up:hover {
+    color: black;
+    background-color: white;
+    transform: scale(110%);
+}
+
+.container {
+    min-width: 70%;
+    height: 800px;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    ;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.login-frame {
+    min-height: cover;
+    min-width: none;
+    min-width: 430px;
+    /* background-color: white; */
+    color: white;
+    position: relative;
+    background-color: #1C1C21;
+}
+
+.notify-frame {
+    min-width: 60%;
+    min-height: cover;
+    background-image: url(./htr.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.notify__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 75%;
+    max-width: 80%;
+    min-height: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+    overflow: hidden;
+    background: transparent;
+    /* backdrop-filter: blur(10px); */
+}
+
+.notify__content::before {
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(./htr.jpg);
+    background-size: cover;
+    opacity: 0.6;
+    z-index: -2;
+}
+
+.notify__content ol li a {
+    font-weight: bolder;
+    color: black;
+    text-overflow: ellipsis;
+    font-size: 1rem;
+    transition: all 0.2s linear;
+}
+
+.notify__content ol li a:hover {
+    font-size: 1.3rem;
+}
+
+.notify__content ol li {
+    margin: 10px;
+    padding: 5px;
+}
+
+.notify__content::before {
+    content: '';
+    position: absolute;
+    background: white;
+}
+
+.center-frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form {
+    font-size: 1rem;
+    border: 1px solid;
+    padding: 15px;
+    min-width: cover;
+    border-radius: 10px;
+}
+
+.login-frame__label {
+    font-size: 2rem;
+    min-width: 170px;
+    margin-bottom: 15px;
+    line-height: 40px;
+}
+
+.form-row {
+    display: flex;
+    padding: 10px;
+    min-width: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__label {
+    min-width: 100px;
+    font-size: 1rem;
+}
+
+.form__input {
+    margin-left: 10px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.remember {
+    position: absolute;
+    margin-top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn {
+    margin-top: 35px;
+    min-width: 340px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #1E90FF;
+    transition: all 0.5s;
+    color: white
+}
+
+.btn:hover {
+    box-shadow: 0 5px 50px -4px rgba(255, 255, 255, 0.7);
+}

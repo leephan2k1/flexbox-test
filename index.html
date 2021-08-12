@@ -11,28 +11,60 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css ">
+    <link rel="stylesheet" href="./repsonsive.css">
+    <script type="text/javascript">
+        function myFunctionLog() {
+            const t = document.getElementById('log');
+            const l = document.getElementById('notify');
+            const buttonNext = document.getElementById('test--1');
+            const buttonThis = document.getElementById('test--2');
+            buttonNext.style.cssText = 'background-color: #E8E8E8; color:black';
+            buttonThis.style.cssText = 'background-color: #1E90FF; color:white';
+            t.style.cssText = 'min-width: 0%; transition: all 0.5s;'
+            l.style.cssText = 'min-width: 100%; transition: all 0.5s;'
+
+        }
+
+        function myFunction() {
+            const l = document.getElementById('notify');
+            const t = document.getElementById('log');
+            const buttonNext = document.getElementById('test--2');
+            const buttonThis = document.getElementById('test--1');
+            buttonNext.style.cssText = 'background-color: #E8E8E8; color:black';
+            buttonThis.style.cssText = 'background-color: #1E90FF; color:white';
+            t.style.cssText = 'min-width: 100%; transition: all 0.5s;';
+            l.style.cssText = 'min-width: 0%; transition: all 0.5s;'
+
+        }
+    </script>
 </head>
 
 <body>
+    <!-- header -->
     <div class="nav">
         <div class="nav__title">
-            <img class="logo" src="./logo.png" alt="Can Tho University">
-            <h1 class="nav__title">HỆ THỐNG QUẢN LÝ</h1>
+            <img class="logo" src="./logo.png " alt="Can Tho University ">
+            <h1 class="nav__content">HỆ THỐNG QUẢN LÝ</h1>
         </div>
         <div class="nav__list">
             <a target="_blank" href="https://dmk.ctu.edu.vn/RDWeb/Pages/en-US/login.aspx?ReturnUrl=/RDWeb/Pages/en-US/Default.aspx" class="sign-up">Đổi mật khẩu</a>
             <a href="https://www.ctu.edu.vn/" target="_blank" class="home">Trang chủ</a>
         </div>
     </div>
-    <div class="container">
-        <div class="login-frame">
+    <!-- body -->
+    <div class="switch">
+        <button id="test--1" onclick="myFunction()">Đăng nhập</button>
+        <button id="test--2" onclick="myFunctionLog()">Thông báo</button>
+    </div>
+    <div class="container ">
+        <div id="log" class="login-frame">
             <div class="center-frame">
                 <h2 class="login-frame__label">Đăng nhập</h2>
                 <form action="#" class="form" method="post" target="_blank">
                     <div class="form-row">
                         <label class="form__label" for="user_id">Mã sinh viên</label>
-                        <input class="form__input" type="text" name="id" id="name" value="B1906711"><br>
+                        <input class="form__input" type="text" name="id" id="name" value="B1906711 "><br>
                     </div>
                     <div class="form-row">
                         <label class="form__label" for="user_pass">Mật khẩu</label>
@@ -42,30 +74,41 @@
                 </form>
                 <div class="remember">
                     <input type="checkbox">
-                    <span> Ghi nhớ đăng nhập</span>
+                    <span>Ghi nhớ đăng nhập</span>
                 </div>
                 <form action="#" target="_blank">
                     <input class="btn" type="submit" value="Đăng nhập">
                     </input>
                 </form>
             </div>
-
         </div>
-        <div class="notify-frame">
+        <div id="notify" class="notify-frame">
             <div class="notify__content">
-                <h2 style="font-size: 1.5rem; text-align: center; font-weight: bold;">Thông báo</h2>
-                <ol>
-                    <li><a href="#">Thông báo xóa lớp học phần HK1, năm học 2021-2022 (Đợt 1).</a></li>
-                    <li><a href="#">Thông báo đưa, đón SV học GDQP K46 đợt 2 (đợt cuối), HK3, năm học 2020-2021.</a></li>
-                    <li><a href="#">Trang tra cứu học phần mở trong HK1, 2021-2022.</a></li>
-                    <li><a href="#"> Thông báo xóa lớp học phần HK3, năm học 2020-2021 (Đợt cuối).</a></li>
-                    <li><a href="#">Thông báo kế hoạch giảng dạy và đăng ký học phần HK1, 2021-2022.</a></li>
-                    <li><a href="#">Thông báo xóa lớp học phần HK3, năm học 2020-2021 (Đợt 1).</a></li>
-                    <li><a href="#">Thông báo đưa, đón SV học GDQP K46 đợt 1, HK3, năm học 2020-2021.</a></li>
-                    <li><a href="#">Lịch học học phần giáo dục quốc phòng và an ninh HK3, năm học 2020-2021.</a></li>
-                </ol>
+                <div class="notify-list">
+                    <h2 style="font-size: 1.5rem; text-align: center; font-weight: bold;">Thông báo</h2>
+                    <ol>
+                        <li><a href="#">Thông báo xóa lớp học phần HK1, năm học 2021-2022 (Đợt 1).</a></li>
+                        <li><a href="#">Thông báo đưa, đón SV học GDQP K46 đợt 2 (đợt cuối), HK3, năm học 2020-2021.</a></li>
+                        <li><a href="#">Trang tra cứu học phần mở trong HK1, 2021-2022.</a></li>
+                        <li><a href="#"> Thông báo xóa lớp học phần HK3, năm học 2020-2021 (Đợt cuối).</a></li>
+                        <li><a href="#">Thông báo kế hoạch giảng dạy và đăng ký học phần HK1, 2021-2022.</a></li>
+                        <li><a href="#">Thông báo xóa lớp học phần HK3, năm học 2020-2021 (Đợt 1).</a></li>
+                        <li><a href="#">Thông báo đưa, đón SV học GDQP K46 đợt 1, HK3, năm học 2020-2021.</a></li>
+                        <li><a href="#">Lịch học học phần giáo dục quốc phòng và an ninh HK3, năm học 2020-2021.</a></li>
+                        <li><a href="#">Thông báo kế hoạch giảng dạy và đăng ký học phần học kỳ 3, năm học 2020-2021.</a></li>
+                        <li><a href="#">Thông báo điều chỉnh KHGD HK2, 2020-2021 (thay đổi phòng học để phục vụ bầu cử ngày 22/5/2021 và 23/5/2021).</a></li>
+                        <li><a href="#">Quy định công tác học vụ từ HK 1 2021-2022.</a></li>
+                    </ol>
+                </div>
             </div>
         </div>
+    </div>
+
+
+    <div class="footer">
+        <span>Trường Đại học Cần Thơ (Can Tho University)</span><br>
+        <span>Khu II, đường 3/2, P. Xuân Khánh, Q. Ninh Kiều, TP. Cần Thơ.</span><br>
+        <span>Điện thoại: (84-292) 3832663 - (84-292) 3838474; Fax: (84-292) 3838474; Email: dhct@ctu.edu.vn.</span>
     </div>
 </body>
 
